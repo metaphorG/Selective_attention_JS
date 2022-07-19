@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Selective Attention Test</title>
+  </head>
+  <body>
+    <img max-height="49px" id="banner" src="/banner.jpg"   />
+
+    <div id="main">
+      <div id="btn">
+        <button
+          id="submit"
+          type="button"
+          class="btn submit"
+          onclick="submit_test()"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          class="btn restart"
+          onClick="document.location.reload(true)"
+        >
+          Restart
+        </button>
+      </div>
+      <div class="score">
+        <span id="timer"></span>
+        <span id="score_text">::SCORE::</span><br /><br /><br /><span
+          id="score"
+        ></span>
+      </div>
+    </div>
+    <div id="start">
+      <button type="button" class="btn start" onClick="start_test()">
+        Start
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

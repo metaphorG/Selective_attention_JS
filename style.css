@@ -1,0 +1,240 @@
+*{
+    background-color: #333;
+    color: #fff;
+}
+#main {
+  margin-left: 1.5cm;
+  display:none;
+  margin-top: 100px;
+  position: absolute;
+}
+.que {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.question_no {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.score{
+    font-size: xx-large;    font-family: monospace;
+    position: fixed;
+    top:100px;
+    right:50px;
+    text-align: center;
+}
+.question_main {
+  grid-column-start: 2;
+  grid-column-end: 7;
+}
+.answer {
+  display: none;
+}
+.option {
+  cursor: pointer;
+  margin: 0;
+  height: 50px;
+  text-align: CENTER;
+  align-content: center;
+  padding-top: 25px;
+  border-radius: 15px;
+  border: 5px solid #333;
+}
+
+/* .option:hover {
+  background-color: #d9f8c4;
+} */
+.option1 {
+  grid-column-start: 2;
+}
+.option5 {
+  grid-column-end: 7;
+}
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  height: 5px;
+  margin-right: 350px;
+}
+.black {
+  background: red;
+}
+.marked {
+  background-color: rgba(88, 83, 83, 0.493);
+}
+#btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+
+.btn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-bottom: 4px solid #2b6cb0;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+}
+.answer_right_submit{
+    background-color: yellow;
+    color: #333;
+}
+#score_text{
+    display:none
+}
+.start{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#banner{
+    position:fixed;
+    left:50%;
+    top:5px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+/*
+
+
+
+
+for (let p = 0; p < total_q; p++) { 
+  for (let o = 0; o < 5; o++) {
+    let t = p * 5;
+    let c = t + o;
+    let v = c - 1;
+    let a = c - 2;
+    let b = c - 3;
+    let k = c - 4;
+    let my_funk = () => {
+      option[c].classList.remove("marked", "ans_wrong", "ans_right");
+      if (c == t) {
+        if (option[c + 1].classList.contains("marked")) {
+          option[c + 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c + 2].classList.contains("marked")) {
+          option[c + 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+
+        if (option[c + 3].classList.contains("marked")) {
+          option[c + 3].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c + 4].classList.contains("marked")) {
+          option[c + 4].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        } else {
+          option[c].classList.add("marked");
+        }
+      }
+      if (v == t) {
+        if (option[c + 1].classList.contains("marked")) {
+          option[c + 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c + 2].classList.contains("marked")) {
+          option[c + 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+
+        if (option[c + 3].classList.contains("marked")) {
+          option[c + 3].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 1].classList.contains("marked")) {
+          option[c - 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        } else {
+          option[c].classList.add("marked");
+        }
+      }
+      if (a == t) {
+        if (option[c + 1].classList.contains("marked")) {
+          option[c + 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c + 2].classList.contains("marked")) {
+          option[c + 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+
+        if (option[c - 2].classList.contains("marked")) {
+          option[c - 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 1].classList.contains("marked")) {
+          option[c - 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        } else {
+          option[c].classList.add("marked");
+        }
+      }
+      if (b == t) {
+        if (option[c + 1].classList.contains("marked")) {
+          option[c + 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 3].classList.contains("marked")) {
+          option[c - 3].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+
+        if (option[c - 2].classList.contains("marked")) {
+          option[c - 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 1].classList.contains("marked")) {
+          option[c - 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        } else {
+          option[c].classList.add("marked");
+        }
+      }
+      if (k == t) {
+        if (option[c - 1].classList.contains("marked")) {
+          option[c - 1].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 2].classList.contains("marked")) {
+          option[c - 2].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+
+        if (option[c - 3].classList.contains("marked")) {
+          option[c - 3].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        }
+        if (option[c - 4].classList.contains("marked")) {
+          option[c - 4].classList.remove("marked", "ans_wrong", "ans_right");
+          option[c].classList.add("marked");
+        } else {
+          option[c].classList.add("marked");
+        }
+      }
+      if (
+        parseInt(option[c].textContent.slice(2)) == answer_check[p].textContent
+      ) {
+        option[c].classList.add("ans_right");
+      } else {
+        option[c].classList.add("ans_wrong");
+      }
+    };
+    option[c].addEventListener("click", my_funk);
+  }
+} 
