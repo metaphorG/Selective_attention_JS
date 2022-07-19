@@ -1,6 +1,7 @@
 *{
     background-color: #333;
     color: #fff;
+    font-size: 24px;
 }
 #main {
   margin-left: 1.5cm;
@@ -29,7 +30,7 @@
 .question_main {
   grid-column-start: 2;
   grid-column-end: 7;
-    font-size: 50px;
+    
 }
 .answer {
   display: none;
