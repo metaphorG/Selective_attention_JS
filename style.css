@@ -91,6 +91,9 @@ hr {
     background-color: yellow;
     color: #333;
 }
+.question_main{
+    font-size: larger;
+}
 #score_text{
     display:none
 }
