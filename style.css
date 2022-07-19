@@ -29,6 +29,7 @@
 .question_main {
   grid-column-start: 2;
   grid-column-end: 7;
+    font-size: 24px;
 }
 .answer {
   display: none;
@@ -91,9 +92,7 @@ hr {
     background-color: yellow;
     color: #333;
 }
-.question_main{
-    font-size: larger;
-}
+
 #score_text{
     display:none
 }
