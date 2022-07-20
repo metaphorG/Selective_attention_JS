@@ -74,7 +74,9 @@ hr {
   bottom: 20px;
   right: 30px;
 }
-
+#timer{
+  background: radial-gradient(#4299e1,#666);
+}
 .btn {
   display: inline-block;
   outline: 0;
@@ -110,4 +112,8 @@ hr {
     transform: translateX(-50%);
     z-index: 1;
 }
-
+#use_comp{position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+z-index: 1;}
