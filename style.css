@@ -15,7 +15,14 @@
   width: fit-content;
   margin-bottom: 20px;
 }
-
+#ads{
+  height:250 px;
+  width:300px;
+  position: fixed;
+  right:5px;
+  top:150px;
+  border:1px solid;
+}
 .question_no {
   font-weight: bold;
   padding-right: 10px;
@@ -23,7 +30,8 @@
 .score{
     font-size: xx-large;    font-family: monospace;
     position: fixed;
-    top:100px;
+    top:70px;
+    z-index: 3;
     right:50px;
     text-align: center;
 }
@@ -46,9 +54,7 @@
   border: 5px solid #333;
 }
 
-/* .option:hover {
-  background-color: #d9f8c4;
-} */
+
 .option1 {
   grid-column-start: 2;
 }
