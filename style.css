@@ -107,10 +107,16 @@ hr {
 }
 #banner{
     position:fixed;
-    left:50%;
-    top:5px;
-    transform: translateX(-50%);
+    height:81px;
+    left:0;
+    top:0;
     z-index: 1;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 891px auto ;
+}
+#banner_text{
+  margin:0;  
 }
 #use_comp{position:fixed;
   top:50%;
