@@ -5,42 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="icon" href="./favicon.png" type="image/png" />
     <title>Selective Attention Test</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2791369097662845"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2791369097662845"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="use_comp">Website will open only on computers</div>
     <div id="all_other">
-      <div id="banner">    <img height="81px" width="" src="./banner.jpg"   />
-      <p id="banner_text">Selective Attention Test <br /> Quetions : 30 <br /> Time : 8 minutes </p>
+      <div id="banner">
+        <p id="banner_text">
+          Selective Attention Test <br />
+          Quetions : 30 <br />
+          Time : 8 minutes
+        </p>
       </div>
 
-    <div id="main">
-      <div id="btn">
-        <button
-          id="submit"
-          type="button"
-          class="btn submit"
-          onclick="submit_test()"
-        >
-          Submit
-        </button>
-        <button
-          type="button"
-          class="btn restart"
-          onClick="document.location.reload(true)"
-          
-        >
-          Restart
-        </button>
-      </div>
-      <div class="score">
-        <span id="timer"></span>
-        <span id="score_text">::SCORE::</span><br />
-        <span id="score"></span>
-        <!-- <span id="ads"><script type="text/javascript">
+      <div id="main">
+        <div id="btn">
+          <button
+            id="submit"
+            type="button"
+            class="btn submit"
+            onclick="submit_test()"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="btn restart"
+            onClick="document.location.reload(true)"
+          >
+            Restart
+          </button>
+        </div>
+        <div class="score">
+          <span id="timer"></span>
+          <span id="score_text">::SCORE::</span><br />
+          <span id="score"></span>
+          <!-- <span id="ads"><script type="text/javascript">
           atOptions = {
             'key' : '203c5430003140eff3162413434b8867',
             'format' : 'iframe',
@@ -50,15 +56,15 @@
           };
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivecreativeformats.com/203c5430003140eff3162413434b8867/invoke.js"></scr' + 'ipt>');
         </script></span> -->
+        </div>
+      </div>
+      <div id="start">
+        <button type="button" class="btn start" onClick="start_test()">
+          Start
+        </button>
       </div>
     </div>
-    <div id="start">
-      <button type="button" class="btn start" onClick="start_test()">
-        Start
-      </button>
-    </div>
-    </div>
-  
+
     <script src="script.js"></script>
   </body>
 </html>

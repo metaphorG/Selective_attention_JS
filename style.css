@@ -1,13 +1,16 @@
-*{
-    background-color: #333;
-    color: #fff;
-    font-size: 24px;
+* {
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
 }
 #main {
-  margin-left: 1.5cm;
-  display:none;
+  margin-left: 200px;
+  display: none;
   margin-top: 100px;
   position: absolute;
+  padding: 5px;
+  border-left: 1px solid #667;
+  border-right: 1px solid #667;
 }
 .que {
   display: grid;
@@ -15,30 +18,23 @@
   width: fit-content;
   margin-bottom: 20px;
 }
-#ads{
-  height:250 px;
-  width:300px;
-  position: fixed;
-  right:5px;
-  top:150px;
-  border:1px solid;
-}
+
 .question_no {
   font-weight: bold;
   padding-right: 10px;
 }
-.score{
-    font-size: xx-large;    font-family: monospace;
-    position: fixed;
-    top:70px;
-    z-index: 3;
-    right:50px;
-    text-align: center;
+.score {
+  font-size: xx-large;
+  font-family: monospace;
+  position: fixed;
+  top: 10px;
+  z-index: 3;
+  right: 10px;
+  text-align: center;
 }
 .question_main {
   grid-column-start: 2;
   grid-column-end: 7;
-    
 }
 .answer {
   display: none;
@@ -53,7 +49,6 @@
   border-radius: 15px;
   border: 5px solid #333;
 }
-
 
 .option1 {
   grid-column-start: 2;
@@ -75,13 +70,19 @@ hr {
 .marked {
   background-color: rgba(88, 83, 83, 0.493);
 }
-#btn {
+.submit {
   position: fixed;
-  bottom: 20px;
+  bottom: 5px;
   right: 30px;
 }
-#timer{
-  background: radial-gradient(#4299e1,#666);
+.restart {
+  position: fixed;
+  bottom: 5px;
+  left: 30px;
+}
+#timer {
+  border: 1px solid #667;
+  font-size: 60px;
 }
 .btn {
   display: inline-block;
@@ -97,35 +98,39 @@ hr {
   color: white;
   line-height: 26px;
 }
-.answer_right_submit{
-    background-color: yellow;
-    color: #333;
+.answer_right_submit {
+  background-color: yellow;
+  color: #333;
 }
 
-#score_text{
-    display:none
+#score_text {
+  display: none;
 }
-.start{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+.start {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-#banner{
-    position:fixed;
-    height:81px;
-    left:0;
-    top:0;
-    z-index: 1;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 891px auto ;
+#banner {
+  position: fixed;
+  height: max-content;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 891px auto;
+  border-bottom: 1px solid #667;
 }
-#banner_text{
-  margin:0;  
+#banner_text {
+  margin: 0;
+  text-align: left;
 }
-#use_comp{position:fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-z-index: 1;}
+#use_comp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
