@@ -94,7 +94,16 @@ function start_timer() {
   var minute = 7;
   var sec = 60;
   var timer_event = setInterval(function () {
-    document.getElementById("timer").innerHTML = minute + ":" + sec;
+    document.getElementById("timer").innerHTML =
+      minute.toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }) +
+      ":" +
+      sec.toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
     sec--;
     if (sec == 00) {
       minute--;

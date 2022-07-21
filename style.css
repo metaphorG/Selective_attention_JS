@@ -23,6 +23,9 @@
   font-weight: bold;
   padding-right: 10px;
 }
+#score {
+  background-color: transparent;
+}
 .score {
   font-size: xx-large;
   font-family: monospace;
@@ -31,6 +34,26 @@
   z-index: 3;
   right: 10px;
   text-align: center;
+  background-color: #2b6cb0;
+  border-radius: 5px;
+  animation: blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground {
+  0% {
+    background-color: #10c018;
+  }
+  25% {
+    background-color: #1056c0;
+  }
+  50% {
+    background-color: #ef0a1a;
+  }
+  75% {
+    background-color: #254878;
+  }
+  100% {
+    background-color: #04a1d5;
+  }
 }
 .question_main {
   grid-column-start: 2;
@@ -105,6 +128,7 @@ hr {
 
 #score_text {
   display: none;
+  background-color: transparent;
 }
 .start {
   position: fixed;
@@ -114,7 +138,7 @@ hr {
 }
 #banner {
   position: fixed;
-  height: max-content;
+  height: 110px;
   left: 0;
   top: 0;
   z-index: 1;
