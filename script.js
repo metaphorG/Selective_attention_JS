@@ -50,14 +50,17 @@ function QAO() {
   }
 
   opts.push(ans);
-  let opts1 = randSumSub(ans, 1);
-  let opts2 = randSumSub(ans, 3);
-  let opts3 = randSumSub(ans, 5);
-  let opts4 = randSumSub(ans, 7);
-  opts.push(opts1);
-  opts.push(opts2);
-  opts.push(opts3);
-  opts.push(opts4);
+
+  while (opts.length < 6) {
+    let rand_1_to_9 = parseInt(Math.random() * 10);
+    let option_generated = randSumSub(ans, rand_1_to_9);
+    if (opts.includes(option_generated)) {
+      continue;
+    } else {
+      opts.push(option_generated);
+    }
+  }
+
   opts.sort(() => Math.random() - 0.5);
   que.sort(() => Math.random() - 0.5);
 
@@ -175,9 +178,9 @@ let score_div = document.getElementById("score");
 
 for (i = 0; i < option.length; i++) {
   option[i].setAttribute("id", i);
-  option[i].addEventListener("click", the_func);
+  option[i].addEventListener("click", mark_or_unmark_selected);
 }
-function the_func() {
+function mark_or_unmark_selected() {
   let id_current = parseInt(this.id);
 
   if (id_current % 5 == 0) {
@@ -332,7 +335,7 @@ function the_func() {
 }
 function submit_test() {
   for (i = 0; i < option.length; i++) {
-    option[i].removeEventListener("click", the_func);
+    option[i].removeEventListener("click", mark_or_unmark_selected);
   }
   for (i = 0; i < option.length; i++) {
     let c = i / 5;
