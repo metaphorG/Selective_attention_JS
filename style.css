@@ -6,9 +6,10 @@
 #main {
   margin-left: 200px;
   display: none;
-  margin-top: 100px;
-  position: absolute;
   padding: 5px;
+  margin-top: 50px;
+  padding-top: 50px;
+  position: absolute;
   border-left: 1px solid #667;
   border-right: 1px solid #667;
 }
@@ -138,13 +139,13 @@ hr {
 }
 #banner {
   position: fixed;
-  height: 110px;
+  height: 90px;
   left: 0;
   top: 0;
   z-index: 1;
   width: 100vw;
   display: grid;
-  grid-template-columns: 891px auto;
+  grid-template-columns: 235px auto auto;
   border-bottom: 1px solid #667;
 }
 #banner_text {
