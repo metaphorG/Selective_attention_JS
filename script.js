@@ -50,7 +50,6 @@ function QAO() {
   }
 
   opts.push(ans);
-  console.log(ans);
   while (opts.length < 5) {
     let rand_1_to_9 = parseInt(Math.random() * 10);
     let option_generated = randSumSub(ans, rand_1_to_9);
@@ -60,10 +59,8 @@ function QAO() {
       opts.push(option_generated);
     }
   }
-  console.log(opts);
   opts.sort(() => Math.random() - 0.5);
   que.sort(() => Math.random() - 0.5);
-  console.log(opts);
 
   for (let i = 0; i < que.length; i++) {
     qao.push(que[i]);
