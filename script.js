@@ -31,7 +31,7 @@ function QAO() {
   let max_no = 50;
   let qao = [];
 
-  var total_odd_array = [11, 12, 13, 14, 15, 16];
+  var total_odd_array = [9, 10, 11];
   var total_odd =
     total_odd_array[Math.floor(Math.random() * total_odd_array.length)];
 
